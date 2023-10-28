@@ -47,7 +47,7 @@ const Login = () => {
     <div className="login">
       <div className='head'>
         <h3>Sign In</h3>
-        <img className="cancel" onClick={backHome} src={Cancel} />
+        <img alt="cancel" className="cancel" onClick={backHome} src={Cancel} />
       </div>
       <div>
         <form className='form' onSubmit={handleSubmit}>
@@ -59,6 +59,7 @@ const Login = () => {
           {passwordError && <div className="error">{passwordError}</div>}
           <button className="buttonsignin" type="submit">Sign In</button>
         </form>
+        <div>Dont't have an account, <a href='./register'>register here</a></div>
       </div>
     </div>
   );

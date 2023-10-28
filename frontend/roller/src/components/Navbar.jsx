@@ -90,8 +90,8 @@ export const Navbar = () => {
                         <a className="links" href="/about">About</a>
                         <a className="links" href="/services">Services</a>
                         <a className="links" href="/contact">Contact</a>
-                        <a className="links linksignin" onClick={handleSignIn}>Sign In</a>
-                        <a className="links linksignup" onClick={handleSignUp}>Sign Up</a>
+                        <a href="./login" className="links linksignin" onClick={handleSignIn}>Sign In</a>
+                        <a href="./register" className="links linksignup" onClick={handleSignUp}>Sign Up</a>
                     </div>
                 </div>
                 

@@ -125,6 +125,7 @@
     border: 1px solid #000;
     border-radius: 12px;
     height: 40px;
+    font-size: 13px;
     font-weight: 800;
     margin-right: 20px;
     margin-top: 5px;
@@ -143,6 +144,7 @@
     border: 1px solid #000;
     border-radius: 12px;
     height: 40px;
+    font-size: 13px;
     font-weight: 800;
     margin-top: 5px;
     cursor: pointer;
@@ -156,4 +158,12 @@
     background-color: #fff;
     color: #000;
     border: 1px solid #000;
+}
+@media screen  and (max-width:1200px){
+    .signIn{
+        font-size: 10px;
+    }
+    .signUp{
+        font-size: 10px;
+    }
 }

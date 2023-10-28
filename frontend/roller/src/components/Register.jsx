@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import './Register.css'
 import axios from 'axios';
+import CancelImg from '../assets/cancel.png';
+import { useNavigate } from 'react-router-dom';
 
 function Register() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     username: '',
@@ -27,8 +30,13 @@ function Register() {
         setErrors(error.response.data);
       });
   };
+  function backHome() {
+    navigate('/');
+  }
 
   return (
+    <div className="register">
+      
     <form onSubmit={handleSubmit}>
       <h1>Register</h1>
       <div>
@@ -86,7 +94,10 @@ function Register() {
         {errors.confirm_password && <span>{errors.confirm_password}</span>}
       </div>
       <button type="submit">Submit</button>
+      <div>Already have an account, <a href="./login">Login here</a></div>
+      <img className="cancel" src={CancelImg} onClick={backHome} alt='cancel' />
     </form>
+    </div>
   );
 }
 
